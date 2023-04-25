@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Literally Canvas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/literallycanvas/0.6.2/css/literallycanvas.min.css" integrity="sha512-kWzH8KbSLF9zERjano+0aHgI6RmTSwYAa5Rknbdvj6VeIatQumMz6UZ3qjKfDOmr7dFlNlD6eIRlQ5r5j0F5zA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fabric.js Drawing</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <div class="literally"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/literallycanvas/0.6.2/lib/js/react.development.js" integrity="sha512-2JA5oU6c3TmT7T1bk2QbO7h8iXy0F9YRfEeHAKubW8ktGk/1cwiwAFrr4FhK4f4lQDzwnV0l0BbS7W8S4WXD1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/literallycanvas/0.6.2/lib/js/react-dom.development.js" integrity="sha512-Em5XX5VT/Jkp5QfvpDd5MhSnBf+Lq+n3z7ZDmHl48G7VU45nk6x8h6Utrc6Uz1ypgIXfxxX3H7oD6d2QV7mI6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/literallycanvas/0.6.2/js/literallycanvas.min.js" integrity="sha512-h67rnTVZihzXSvFICx0rm8x4uk0szP93zIvRiClKrW8O6T93T1YjEGg1lCknWq3GyHkLZeQsnz4rvPc4Q4hm4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
     <script>
-        const el = document.getElementsByClassName('literally')[0];
-        const lc = LC.init(el, {imageURLPrefix: 'https://cdnjs.cloudflare.com/ajax/libs/literallycanvas/0.6.2/img'});
+        const canvas = new fabric.Canvas('drawingCanvas', {
+            isDrawingMode: true
+        });
     </script>
 </body>
 </html>
